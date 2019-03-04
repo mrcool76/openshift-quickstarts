@@ -85,6 +85,7 @@ public class ServletServer {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        ChatServer server = new ChatServer();
     }
     
     private static KeyStore loadKeyStore(File file, char[] password) throws Exception {
