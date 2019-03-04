@@ -52,23 +52,7 @@ public class ServletServer {
                     .setClassLoader(ServletServer.class.getClassLoader())
                     .setContextPath(MYAPP)
                     .setDeploymentName("test.war")\
-                ChatServer chatServer;
-			chatServer = new ChatServer();
-			String port = chatServer.checkPort(args);
-			boolean isGUI = chatServer.checkGUI(args);
-			if(isGUI) {
-				if(port!=null) {
-					chatServer.setPort(Integer.parseInt(port));
-					chatServer.start();
-					chatServer.go();
-				}
-			}else {
-				
-			}
-			
-			
-			System.out.println("PROGRAM FINISHED");
-			System.exit(0);
+              
                     .addServlets(
                             servlet("MessageServlet", MessageServlet.class)
                                     .addInitParam("message", "WHAT UP World")
