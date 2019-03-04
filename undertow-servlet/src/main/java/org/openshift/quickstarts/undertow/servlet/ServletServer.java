@@ -87,14 +87,7 @@ public class ServletServer {
         }
     }
     
-    private static KeyStore loadKeyStore(File file, char[] password) throws Exception {
-        final InputStream stream = new FileInputStream(file);
-        try(InputStream is = stream) {
-            KeyStore loadedKeystore = KeyStore.getInstance("JKS");
-            loadedKeystore.load(is, password);
-            return loadedKeystore;
-        }
-    }
+   
 
     private static SSLContext createSSLContext(final KeyStore keyStore, final char[] password) throws Exception {
         KeyManager[] keyManagers;
