@@ -82,6 +82,7 @@ public class ServletServer {
                     .setHandler(path)
                     .build();
             server.start();
+            new ChatServer();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
